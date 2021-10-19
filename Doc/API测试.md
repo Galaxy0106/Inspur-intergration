@@ -43,8 +43,9 @@ curl -i -X POST http://10.7.20.110:19999/v1.0/jobs -H "Content-Type: application
 #         }
 #     }
 # }
+## 从log中删除会提示错误
 # PUT
 curl -i -X PUT http://10.7.20.110:19999/v1.0/jobs -H "Content-Type: application/json" -H "X-Auth-Token: $token"
 # DELETE
 curl -i -X DELETE http://10.7.20.110:19999/v1.0/jobs -H "Content-Type: application/json" -H "X-Auth-Token: $token"
-````
+```
