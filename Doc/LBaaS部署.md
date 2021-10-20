@@ -36,15 +36,14 @@ $ sudo dhclient -v o-hm0
 # All rights reserved.
 # For info, please visit https://www.isc.org/software/dhcp/
 
-# Listening on LPF/o-hm0/fa:16:3e:12:10:b0
-# Sending on   LPF/o-hm0/fa:16:3e:12:10:b0
+# Listening on LPF/o-hm0/fa:16:3e:d1:b3:b2
+# Sending on   LPF/o-hm0/fa:16:3e:d1:b3:b2
 # Sending on   Socket/fallback
-# Created duid "\000\004\257`^\007\357.D\341\264O0\330./\361{".
-# DHCPDISCOVER on o-hm0 to 255.255.255.255 port 67 interval 7 (xid=0xc98d6328)
-# DHCPREQUEST on o-hm0 to 255.255.255.255 port 67 (xid=0xc98d6328)
+# DHCPDISCOVER on o-hm0 to 255.255.255.255 port 67 interval 8 (xid=0xbe4d70)
+# DHCPREQUEST on o-hm0 to 255.255.255.255 port 67 (xid=0xbe4d70)
 # DHCPOFFER from 192.168.10.2
-# DHCPACK from 192.168.10.2 (xid=0xc98d6328)
-# bound to 192.168.10.20 -- renewal in 42508 seconds.
+# DHCPACK from 192.168.10.2 (xid=0xbe4d70)
+# bound to 192.168.10.6 -- renewal in 42200 seconds.
 ```
 
 

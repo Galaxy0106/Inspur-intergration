@@ -100,3 +100,40 @@ $ sudo ip netns exec dhcp-$net1_id curl -v $VIP
 # ADD into the pool as members
 # Request the VIP four times
 ```
+
+
+
+### octavia.conf
+```
+52,53c52,53
+< bind_ip = 192.168.10.6
+< controller_ip_port_list = 192.168.10.6:5555
+---
+> bind_ip = 10.7.20.110
+> controller_ip_port_list = 10.7.20.110:5555
+57c57
+< amp_boot_network_list = 8acc6c02-66aa-4c0a-92bb-2a7a9c184ab1
+---
+> amp_boot_network_list =
+59c59
+< amp_secgroup_list = e4282699-43fd-4cb5-a709-cfaf213640f5
+---
+> amp_secgroup_list =
+77,80c77
+< region_name = CentralRegion
+< service_name = neutron
+< endpoint = http://10.7.20.110:20001
+< endpoint_type = public
+---
+> region_name = RegionOne
+84,86d80
+< service_name = nova
+< endpoint = http://10.7.20.114:8774/v2.1/b35450fd79164af4a0df26149228ddf2
+< endpoint_type = public
+90,92c84
+< service_name = neutron
+< endpoint = http://10.7.20.114:9292
+< endpoint_type = public
+---
+>
+```
