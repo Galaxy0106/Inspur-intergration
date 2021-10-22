@@ -11,3 +11,10 @@ MGMT_PORT_MAC=${id_and_mac[1]}
 MGMT_PORT_IP=$(openstack --os-region-name RegionOne port show -f value -c fixed_ips $MGMT_PORT_ID | awk '{FS=",| "; gsub(",",""); gsub("'\''",""); for(i = 1; i <= NF; ++i) {if ($i ~ /^ip_address/) {n=index($i, "="); if (substr($i, n+1) ~ "\\.") print substr($i, n+1)}}}')
 openstack --os-region-name RegionOne port set --host $(hostname)  $MGMT_PORT_ID
 
+cmd="ovs-vsctl -- --may-exist add-port ${OVS_BRIDGE:-br-int} o-hm0 -- set Interface o-hm0 type=internal -- set Interface o-hm0 external-ids:iface-status=active -- set Interface o-hm0 external-ids:attached-mac=$MGMT_PORT_MAC -- set Interface o-hm0 external-ids:iface-id=$MGMT_PORT_ID -- set Interface o-hm0 external-ids:skip_cleanup=true"
+docker exec -it -u root openvswitch_vswitchd $cmd
+# In host
+ip link set dev o-hm0 address $MGMT_PORT_MAC
+# 注意记录绑定的IP
+dhclient -v o-hm0
+iptables -I INPUT -i o-hm0 -p udp --dport 5555 -j ACCEPT

@@ -131,7 +131,7 @@ $ sudo ip netns exec dhcp-$net1_id curl -v $VIP
 < endpoint = http://10.7.20.114:8774/v2.1/b35450fd79164af4a0df26149228ddf2
 < endpoint_type = public
 90,92c84
-< service_name = neutron
+< service_name = glance
 < endpoint = http://10.7.20.114:9292
 < endpoint_type = public
 ---

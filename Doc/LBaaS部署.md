@@ -43,7 +43,7 @@ $ sudo dhclient -v o-hm0
 # DHCPREQUEST on o-hm0 to 255.255.255.255 port 67 (xid=0xbe4d70)
 # DHCPOFFER from 192.168.10.2
 # DHCPACK from 192.168.10.2 (xid=0xbe4d70)
-# bound to 192.168.10.6 -- renewal in 42200 seconds.
+# bound to 192.168.10.9 -- renewal in 42200 seconds.
 ```
 
 
@@ -76,5 +76,7 @@ $ openstack --os-region-name RegionOne loadbalancer create --name lb1 --vip-subn
 
 ## 连不上虚拟机
 sudo iptables -I INPUT -i o-hm0 -p udp --dport 5555 -j ACCEPT
+
+## Invalid key_name provided, Failure: octavia.common.exceptions.ComputeBuildException: Failed to build compute instance due to: Invalid key_name provided
 
 ```
