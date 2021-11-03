@@ -5,6 +5,7 @@ listener: listener-test1
 pool: pool-test1
 
 VIP: 30.0.1.7
+port: 80
 
 # 虚拟机
 ## RegionOne
