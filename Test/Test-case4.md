@@ -17,7 +17,7 @@ Web-vm03: 30.0.1.31(LB-net1)
 Web-vm04: 30.0.5.28(LB-net2-test)
 ```
 
-## 使用
+## 演示
 ```shell
 # In Web-vm
 python3 manage.py runserver $ip:8000
@@ -27,8 +27,8 @@ python3 manage.py runserver $ip:8000
 
 # 注意防火墙！！！
 sudo ufw allow 8000
-
+# 浏览器快捷键
 end
+# Ubuntu大小写切换
 Caps + ...
 ```
-
