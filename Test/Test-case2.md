@@ -31,6 +31,14 @@ screen -X -S {$id} quit
 # 切换服务
 ## 1. screen关闭L3相关的会话
 ## 2. screen重新启动服务，注意指定非L3的配置文件
+screen -S t-api3
+tricircle-api --config-file /opt/tricircle/etc/api3.conf
+
+screen -S t-xjob3
+tricircle-xjob --config-file /opt/tricircle/etc/xjob3.conf
+
+screen -S neutron03
+neutron-server --config-file /opt/neutron/etc/neutron03.conf
 
 # iperf
 iperf -s

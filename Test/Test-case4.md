@@ -4,7 +4,7 @@ load balancer: lb-test2
 listener: listener-test2
 pool: pool-test2
 
-VIP: 30.0.1.15
+VIP: 30.0.1.2
 port: 8000
 
 # 虚拟机
