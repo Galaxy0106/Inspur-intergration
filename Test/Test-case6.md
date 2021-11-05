@@ -14,3 +14,4 @@ curl -i -X PUT http://10.7.20.110:19999/v1.0/jobs/{id} -H "Content-Type: applica
 ## DELETE请求：delete a failed or duplicated job
 curl -i -X DELETE http://10.7.20.110:19999/v1.0/jobs/{id} -H "Content-Type: application/json" -H "X-Auth-Token: $token"
 ```
+文档写错了

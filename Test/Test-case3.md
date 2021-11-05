@@ -21,3 +21,18 @@ backend4: 30.0.5.5(LB-net2-test1)
 ```
 ip netns exec qdhcp-8d52adf5-3363-47a4-baf3-dfbb7aa9cafb curl -v 30.0.1.5
 ```
+
+##
+```
+Openstack组件的版本
+
+RegionOne 物理位置
+RegionTwo 物理位置
+
+几台服务器，几次请求标明清楚
+
+涉及软件、组件的版本号
+
+
+步骤1、2删掉
+```
