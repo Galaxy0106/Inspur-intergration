@@ -41,6 +41,15 @@ screen -S neutron03
 neutron-server --config-file /opt/neutron/etc/neutron03.conf
 
 # iperf
-iperf -s
+iperf -s -P 8000
 iperf -c $server_ip -i 1 -p 8000
+```
+
+```
+标明创建资源的工具
+命令行截图
+网络拓扑
+
+
+iperf版本
 ```
